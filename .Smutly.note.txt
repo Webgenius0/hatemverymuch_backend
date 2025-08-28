@@ -1,0 +1,38 @@
+Project Name: Smutly (Hatem Very Much)
+Demo/Figma Name: Smutly
+Client: Nate Hatem
+Team: wp_monkey
+Type: SaaS Based Creator-Fan Social Media Site
+Date: 23 August 2025
+------------------------------------------------------------------------------
+#CREDS:
+    - Git: https://github.com/Webgenius0/hatemverymuch_backend.git
+    - Git Personal Access Token (Classic) for this repo: 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
+
+-----------------------------------------------
+# SERVER:
+
+    -- AWS : for media like image, videos store.
+    -- 
+
+############################################
+
+
+
+Change Log:
+
+Site: Smutly
+Client: Mr. Nate Hatem
+Team: wp_monkey
+
+# Module: Content/Post Page
+
+    - Post/Content creation.
+    - Display all timeline posts made by creators..
+    - Single post display API for pop-up modals.
+    - Creator can now modify & update their existing posts.
+    - Content delete also deletes images saving storage space.
+    - Optimized content replacements for post updates storing only necessary data preventing duplication & end-user clarity.
+    - Futureproof exception handling for critical conditions.
+    - Use-Content cascade. Removal of a user will delete their posts.
+    - Arbitrary tags created on posts will be lexically sanitized and saved and shared by all users without duplication. e.g.: [game, music, medical science] will be converted into three.
