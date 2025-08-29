@@ -21,7 +21,7 @@ class Content extends Model
 		return $this->belongsToMany(Tag::class, 'content_tag_pivots');
 	}
 
-	public function contentsRelationTo_users(): BelongsTo
+	public function contentsRelationTo_users()
 	{
 		return $this->belongsTo(User::class, 'creator');
 	}

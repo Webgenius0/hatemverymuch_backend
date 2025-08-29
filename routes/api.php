@@ -3,8 +3,10 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\Contents\ContentController;
+use App\Http\Controllers\Api\Contents\ContentGetController;
 use App\Http\Controllers\Api\EmailVerificationController;
 use App\Http\Controllers\Api\PasswordResetController;
+
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -53,11 +55,25 @@ Route::post('/email/verify-otp', [EmailVerificationController::class, 'verifyOtp
 
 // ------------ Contents: Creators making contents ------------ //
 Route::middleware('auth:api')->prefix('auth')->group(function () {
-
+    Route::get('content/all', [ContentController::class, 'allContents'])->name('content.contents');
     Route::post('content/create', [ContentController::class, 'createContent'])->name('content.create');
     Route::get('content/{id}/show', [ContentController::class, 'showContent'])->name('content.show');
     Route::post('content/{id}/update', [ContentController::class, 'updateContent'])->name('content.update');
     Route::delete('content/{contentID}/delete', [ContentController::class, 'deleteContent'])->name('content.delete');
+
+
+
+
+        Route::get('my-contents', [ContentGetController::class, 'myContents']);
+
+
 });
 
-Route::get('auth/content/all', [ContentController::class, 'allContents'])->name('content.contents');
+//Sazzad New
+Route::get('/content/show/all', [ContentGetController::class, 'getContent'])->name('content.get');
+Route::get('/creator/show/all', [ContentGetController::class, 'getCreator'])->name('creator.get');
+
+Route::get('/content/my', [ContentGetController::class, 'myContent'])->name('creator.get');
+
+
+
