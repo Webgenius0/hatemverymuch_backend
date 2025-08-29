@@ -86,40 +86,9 @@ class UserSeeder extends Seeder
             ],
         ];
 
-<<<<<<< HEAD
-        // DB::table('users')->insert([
-        //     'name' => 'Admin',
-        //     'email' => 'admin@gmail.com',
-        //     'password' => Hash::make('12345678'),
-        //     'role' => 'admin',
-        //     'profile_image' => 'backend/images/users/user-1.jpg',
-        // ]);
-        // DB::table('users')->insert([
-        //     'name' => 'Creator3',
-        //     'email' => 'creator3@gmail.com',
-        //     'role' => 'subscriber',
-        //     'password' => Hash::make('12345678'),
-        //     'profile_image' => 'backend/images/users/user-2.jpg',
-        // ]);
-        // DB::table('users')->insert([
-        //     'name' => 'Creator2',
-        //     'email' => 'test@example.com',
-        //     'role' => 'subscriber',
-        //     'password' => Hash::make('StrongP@ss123'),
-        //     'profile_image' => 'backend/images/users/user-3.jpg',
-        // ]);
-        // DB::table('users')->insert([
-        //     'name' => 'User',
-        //     'email' => 'user@gmail.com',
-        //     'role' => 'user',
-        //     'password' => Hash::make('12345678'),
-        //     'profile_image' => 'backend/images/users/user-4.jpg',
-        // ]);
-=======
         foreach ($users as $user) {
             User::create($user);
         }
->>>>>>> ridoan
 
     }
 }
