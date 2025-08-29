@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\Contact\ApiContactController;
 use App\Http\Controllers\Api\Contents\ContentController;
 use App\Http\Controllers\Api\EmailVerificationController;
 use App\Http\Controllers\Api\PasswordResetController;
@@ -77,6 +78,8 @@ Route::middleware(['auth:api','api'])->group(function () {
     Route::delete('tier/delete/{id}', [ApiTierController::class, 'destroy']);
 
 });
+
+Route::post('/contact/message', [ApiContactController::class, 'store']);
 
 // masum ------------------ end   ----------------------------
 
