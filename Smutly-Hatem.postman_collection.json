@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "7c1dd7c9-f715-49e5-929e-77594f8a5e8f",
+		"name": "Smutly-Hatem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47785051",
+		"_collection_link": "https://rk-settings-693918.postman.co/workspace/Kabir's-Workspace~ee609d52-bb40-4f5f-87e9-e548137f58f3/collection/47785051-7c1dd7c9-f715-49e5-929e-77594f8a5e8f?action=share&source=collection_link&creator=47785051"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/login?email=creator@gmail.com&password=12345678",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "creator@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "12345678"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Content::Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NTU5NDA1NjMsImV4cCI6MTc1NTk0NDE2MywibmJmIjoxNzU1OTQwNTYzLCJqdGkiOiJqTTdlRDFIQnhNa29QRFkyIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.9fshUCwilhOW-njpS5PqskGuuqv2JrMZgK3rOmtJbYo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/content/create?tier_id=1&title=saturday morning&description=creator lorem ipsum longtext&schedule=2025-09-01 11:30:00&file=/image/file.jpg&creator=the creator&tags=food|music %26 songs.games",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"content",
+						"create"
+					],
+					"query": [
+						{
+							"key": "tier_id",
+							"value": "1"
+						},
+						{
+							"key": "title",
+							"value": "saturday morning"
+						},
+						{
+							"key": "description",
+							"value": "creator lorem ipsum longtext"
+						},
+						{
+							"key": "schedule",
+							"value": "2025-09-01 11:30:00"
+						},
+						{
+							"key": "file",
+							"value": "/image/file.jpg"
+						},
+						{
+							"key": "creator",
+							"value": "the creator"
+						},
+						{
+							"key": "tags",
+							"value": "food|music & songs.games"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Content::Create (files)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NTU5NDUxNjYsImV4cCI6MTc1NTk0ODc2NiwibmJmIjoxNzU1OTQ1MTY2LCJqdGkiOiJ4TDQxY3hCbjZJd2ttTTloIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.aGjDx1CL6eCT8tOjQgOAl59fsdtDX03rD2OS5DQB274",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tier_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "user making title",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "user lorem ipsum longtext",
+							"type": "text"
+						},
+						{
+							"key": "schedule",
+							"value": "2025-09-01 11:30:00",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Ridoan/Videos/earth revolving.mp4"
+						},
+						{
+							"key": "creator",
+							"value": "the creator",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "food,music,games",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/content/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"content",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
