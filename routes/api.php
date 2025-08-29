@@ -40,6 +40,17 @@ Route::post('password/reset', [PasswordResetController::class, 'resetPassword'])
 Route::post('password/resend', [PasswordResetController::class, 'resendResetLink']); // optional resend
 
 
+
+// ------------ Utilities: Tags, Likes, Shares ------------ //
+Route::middleware('auth:api')->prefix('auth')->group(function () {
+    Route::get('utilities/tags/all', [ContentController::class, 'getAllTags'])->name('content.utilities.tags');
+});
+
+// routes/api.php
+
+Route::post('/email/verify-otp', [EmailVerificationController::class, 'verifyOtp']);
+
+
 // ------------ Contents: Creators making contents ------------ //
 Route::middleware('auth:api')->prefix('auth')->group(function () {
 
@@ -50,12 +61,3 @@ Route::middleware('auth:api')->prefix('auth')->group(function () {
 });
 
 Route::get('auth/content/all', [ContentController::class, 'allContents'])->name('content.contents');
-
-// ------------ Utilities: Tags, Likes, Shares ------------ //
-Route::middleware('auth:api')->prefix('auth')->group(function () {
-    Route::get('utilities/tags/all', [ContentController::class, 'getAllTags'])->name('content.utilities.tags');
-});
-
-// routes/api.php
-
-Route::post('/email/verify-otp', [EmailVerificationController::class, 'verifyOtp']);
