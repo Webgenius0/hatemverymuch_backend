@@ -42,15 +42,22 @@ Route::post('password/resend', [PasswordResetController::class, 'resendResetLink
 
 // ------------ Contents: Creators making contents ------------ //
 Route::middleware('auth:api')->prefix('auth')->group(function () {
+<<<<<<< HEAD
 
+=======
+    Route::get('content/all', [ContentController::class, 'allContents'])->name('content.contents');
+>>>>>>> 32c7546a4e8da50d913b3fa44d208c5056e5ef2a
     Route::post('content/create', [ContentController::class, 'createContent'])->name('content.create');
     Route::get('content/{id}/show', [ContentController::class, 'showContent'])->name('content.show');
     Route::post('content/{id}/update', [ContentController::class, 'updateContent'])->name('content.update');
     Route::delete('content/{contentID}/delete', [ContentController::class, 'deleteContent'])->name('content.delete');
 });
 
+<<<<<<< HEAD
 Route::get('auth/content/all', [ContentController::class, 'allContents'])->name('content.contents');
 
+=======
+>>>>>>> 32c7546a4e8da50d913b3fa44d208c5056e5ef2a
 // ------------ Utilities: Tags, Likes, Shares ------------ //
 Route::middleware('auth:api')->prefix('auth')->group(function () {
     Route::get('utilities/tags/all', [ContentController::class, 'getAllTags'])->name('content.utilities.tags');

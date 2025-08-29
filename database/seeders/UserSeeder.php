@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class UserSeeder extends Seeder
 {
+<<<<<<< HEAD
     /**
      * Run the database seeds.
      */
@@ -17,6 +18,13 @@ class UserSeeder extends Seeder
     {
         $users = [
             [
+=======
+
+
+    public function run(): void
+    {
+        DB::table('users')->insert([
+>>>>>>> 32c7546a4e8da50d913b3fa44d208c5056e5ef2a
                 'name' => 'Admin',
                 'lastname' => 'User',
                 'username' => 'admin',
@@ -26,9 +34,29 @@ class UserSeeder extends Seeder
                 'bio' => 'The super admin of the platform.',
                 'profile_pic' => null,
                 'banner_pic' => null,
+<<<<<<< HEAD
                 'email_verified_at' => now(),
             ],
             [
+=======
+        ]);
+
+        DB::table('users')->insert([
+                'name' => 'User',
+                'lastname' => 'Test',
+                'username' => 'Test User',
+                'role' => 'user',
+                'subscribe' => '0',
+                'email' => 'user@gmail.com',
+                'password' => Hash::make('12345678'),
+                'bio' => 'Just a regular fan.',
+                'profile_pic' => null,
+                'banner_pic' => null,
+                'weblink' => 'www.user.com',
+        ]);
+
+        DB::table('users')->insert([
+>>>>>>> 32c7546a4e8da50d913b3fa44d208c5056e5ef2a
                 'name' => 'John',
                 'lastname' => 'Doe',
                 'username' => 'john_doe',
@@ -40,6 +68,7 @@ class UserSeeder extends Seeder
                 'profile_pic' => null,
                 'banner_pic' => null,
                 'weblink' => 'www.user.com',
+<<<<<<< HEAD
                 'email_verified_at' => now(),
             ],
             [
@@ -122,4 +151,10 @@ class UserSeeder extends Seeder
 >>>>>>> ridoan
 
     }
+=======
+        ]);
+    }
+
+
+>>>>>>> 32c7546a4e8da50d913b3fa44d208c5056e5ef2a
 }
