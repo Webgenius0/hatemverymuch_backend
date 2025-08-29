@@ -10,13 +10,11 @@ use Illuminate\Support\Facades\DB;
 
 class UserSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
+
+
     public function run(): void
     {
-        $users = [
-            [
+        DB::table('users')->insert([
                 'name' => 'Admin',
                 'lastname' => 'User',
                 'username' => 'admin',
@@ -26,9 +24,23 @@ class UserSeeder extends Seeder
                 'bio' => 'The super admin of the platform.',
                 'profile_pic' => null,
                 'banner_pic' => null,
-                'email_verified_at' => now(),
-            ],
-            [
+        ]);
+
+        DB::table('users')->insert([
+                'name' => 'User',
+                'lastname' => 'Test',
+                'username' => 'Test User',
+                'role' => 'user',
+                'subscribe' => '0',
+                'email' => 'user@gmail.com',
+                'password' => Hash::make('12345678'),
+                'bio' => 'Just a regular fan.',
+                'profile_pic' => null,
+                'banner_pic' => null,
+                'weblink' => 'www.user.com',
+        ]);
+
+        DB::table('users')->insert([
                 'name' => 'John',
                 'lastname' => 'Doe',
                 'username' => 'john_doe',
@@ -40,55 +52,8 @@ class UserSeeder extends Seeder
                 'profile_pic' => null,
                 'banner_pic' => null,
                 'weblink' => 'www.user.com',
-                'email_verified_at' => now(),
-            ],
-            [
-                'name' => 'Jane',
-                'lastname' => 'Smith',
-                'username' => 'jane_smith',
-                'role' => 'user',
-                'subscribe' => '0',
-                'email' => 'jane@gmail.com',
-                'password' => Hash::make('12345678'),
-                'bio' => 'Creative content user.',
-                'profile_pic' => null,
-                'banner_pic' => null,
-                'weblink' => 'www.user.com',
-                'email_verified_at' => now(),
-            ],
-            [
-                'name' => 'Alice',
-                'lastname' => 'Wonder',
-                'username' => 'alice_wonder',
-                'role' => 'user',
-                'subscribe' => '0',
-                'email' => 'alice@gmail.com',
-                'password' => Hash::make('12345678'),
-                'bio' => 'Love to follow users.',
-                'profile_pic' => null,
-                'banner_pic' => null,
-                'weblink' => 'www.user.com',
-                'email_verified_at' => now(),
-            ],
-            [
-                'name' => 'Bob',
-                'lastname' => 'Builder',
-                'username' => 'bob_builder',
-                'role' => 'user',
-                'subscribe' => '1',
-                'email' => 'bob@gmail.com',
-                'password' => Hash::make('12345678'),
-                'bio' => 'Building content daily.',
-                'profile_pic' => null,
-                'banner_pic' => null,
-                'weblink' => 'www.user.com',
-                'email_verified_at' => now(),
-            ],
-        ];
-
-        foreach ($users as $user) {
-            User::create($user);
-        }
-
+        ]);
     }
+
+
 }
