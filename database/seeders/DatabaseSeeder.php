@@ -18,17 +18,6 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             // other seeders...
         ]);
-        // User::factory(10)->create();
 
-        // User::factory()->create([
-        //     'name' => 'Test Admin',
-        //     'email' => 'admin@admin.com',
-        //     'password' => '12345678',
-        // ]);
-        // $roles = ['fans', 'creator', 'admin'];
-
-        // foreach ($roles as $roleName) {
-        //     Role::firstOrCreate(['name' => $roleName]);
-        // }
     }
 }
