@@ -2,12 +2,11 @@
 
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\Contact\ApiContactController;
 use App\Http\Controllers\Api\Contents\ContentController;
 use App\Http\Controllers\Api\Contents\ContentGetController;
 use App\Http\Controllers\Api\EmailVerificationController;
 use App\Http\Controllers\Api\PasswordResetController;
-
-use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -75,5 +74,26 @@ Route::get('/creator/show/all', [ContentGetController::class, 'getCreator'])->na
 
 Route::get('/content/my', [ContentGetController::class, 'myContent'])->name('creator.get');
 
+
+
+
+
+// masum ------------------ start ----------------------------
+
+
+Route::middleware(['auth:api','api'])->group(function () {
+
+    // Tier API routes
+    Route::get('tier/index', [ApiTierController::class, 'index']);
+    Route::post('tier/create', [ApiTierController::class, 'store']);
+    Route::get('tier/show/{id}', [ApiTierController::class, 'show']);
+    Route::post('tier/update/{id}', [ApiTierController::class, 'update']);
+    Route::delete('tier/delete/{id}', [ApiTierController::class, 'destroy']);
+
+});
+
+Route::post('/contact/message', [ApiContactController::class, 'store']);
+
+// masum ------------------ end   ----------------------------
 
 

@@ -1,10 +1,8 @@
-@extends('admin.layouts.app')
+<?php $__env->startPush('css'); ?>
 
-@push('css')
+<?php $__env->stopPush(); ?>
 
-@endpush
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 
         <div class="main-content">
@@ -12,9 +10,6 @@
             <div class="main-content-inner">
                 <!-- main-content-wrap -->
                 <div class="main-content-wrap">
-
-
-
                     <div class="tf-section-4 mb-30">
                         <!-- chart-default -->
                         <div class="wg-chart-default">
@@ -167,11 +162,11 @@
                                 <ul class="flex flex-column gap10">
                                     <li class="product-item gap14">
                                         <div class="image">
-                                            <img src="{{ asset('images/products/16.png') }}" alt="">
+                                            <img src="<?php echo e(asset('images/products/16.png')); ?>" alt="">
                                         </div>
                                         <div class="flex items-center justify-between flex-grow">
                                             <div class="name">
-                                                <a href="{{ asset('product-list.html') }}" class="body-title-2">Patimax Fragrance Long...</a>
+                                                <a href="<?php echo e(asset('product-list.html')); ?>" class="body-title-2">Patimax Fragrance Long...</a>
                                             </div>
                                             <div class="body-text">X1</div>
                                             <div class="body-text">$28,672.36</div>
@@ -183,11 +178,11 @@
                                     <li class="divider"></li>
                                     <li class="product-item gap14">
                                         <div class="image">
-                                            <img src="{{ asset('images/products/17.png') }}" alt="">
+                                            <img src="<?php echo e(asset('images/products/17.png')); ?>" alt="">
                                         </div>
                                         <div class="flex items-center justify-between flex-grow">
                                             <div class="name">
-                                                <a href="{{ asset('product-list.html') }}" class="body-title-2">WholeHearted Grain Free Large...</a>
+                                                <a href="<?php echo e(asset('product-list.html')); ?>" class="body-title-2">WholeHearted Grain Free Large...</a>
                                             </div>
                                             <div class="body-text">X1</div>
                                             <div class="body-text">$28,672.36</div>
@@ -199,11 +194,11 @@
                                     <li class="divider"></li>
                                     <li class="product-item gap14">
                                         <div class="image">
-                                            <img src="{{ asset('images/products/18.png') }}" alt="">
+                                            <img src="<?php echo e(asset('images/products/18.png')); ?>" alt="">
                                         </div>
                                         <div class="flex items-center justify-between flex-grow">
                                             <div class="name">
-                                                <a href="{{ asset('product-list.html') }}" class="body-title-2">Dog Food Rachael Ray Nutrish®</a>
+                                                <a href="<?php echo e(asset('product-list.html')); ?>" class="body-title-2">Dog Food Rachael Ray Nutrish®</a>
                                             </div>
                                             <div class="body-text">X1</div>
                                             <div class="body-text">$28,672.36</div>
@@ -215,11 +210,11 @@
                                     <li class="divider"></li>
                                     <li class="product-item gap14">
                                         <div class="image">
-                                            <img src="{{ asset('images/products/19.png') }}" alt="">
+                                            <img src="<?php echo e(asset('images/products/19.png')); ?>" alt="">
                                         </div>
                                         <div class="flex items-center justify-between flex-grow">
                                             <div class="name">
-                                                <a href="{{ asset('product-list.html') }}" class="body-title-2">Freshpet Healthy Dog Food and Cat...</a>
+                                                <a href="<?php echo e(asset('product-list.html')); ?>" class="body-title-2">Freshpet Healthy Dog Food and Cat...</a>
                                             </div>
                                             <div class="body-text">X1</div>
                                             <div class="body-text">$28,672.36</div>
@@ -231,11 +226,11 @@
                                     <li class="divider"></li>
                                     <li class="product-item gap14">
                                         <div class="image">
-                                            <img src="{{ asset('images/products/20.png') }}" alt="">
+                                            <img src="<?php echo e(asset('images/products/20.png')); ?>" alt="">
                                         </div>
                                         <div class="flex items-center justify-between flex-grow">
                                             <div class="name">
-                                                <a href="{{ asset('product-list.html') }}" class="body-title-2">Natural Dog Food Healthy Dog Food</a>
+                                                <a href="<?php echo e(asset('product-list.html')); ?>" class="body-title-2">Natural Dog Food Healthy Dog Food</a>
                                             </div>
                                             <div class="body-text">X1</div>
                                             <div class="body-text">$28,672.36</div>
@@ -258,10 +253,10 @@
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end">
                                         <li>
-                                            <a href="{{ asset('javascript:void(0);') }}">This Week</a>
+                                            <a href="<?php echo e(asset('javascript:void(0);')); ?>">This Week</a>
                                         </li>
                                         <li>
-                                            <a href="{{ asset('javascript:void(0);') }}">Last Week</a>
+                                            <a href="<?php echo e(asset('javascript:void(0);')); ?>">Last Week</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -285,11 +280,11 @@
                                 <ul class="flex flex-column gap18">
                                     <li class="product-item gap14">
                                         <div class="image no-bg">
-                                            <img src="{{ asset('images/products/21.png') }}" alt="">
+                                            <img src="<?php echo e(asset('images/products/21.png')); ?>" alt="">
                                         </div>
                                         <div class="flex items-center justify-between flex-grow gap10">
                                             <div class="name">
-                                                <a href="{{ asset('product-list.html') }}" class="body-text">Sojos Crunchy Natural Grain Free...</a>
+                                                <a href="<?php echo e(asset('product-list.html')); ?>" class="body-text">Sojos Crunchy Natural Grain Free...</a>
                                             </div>
                                             <div class="body-text">20 Nov 2023</div>
                                             <div class="body-text">20 Nov 2023</div>
@@ -299,11 +294,11 @@
                                     <li class="divider"></li>
                                     <li class="product-item gap14">
                                         <div class="image no-bg">
-                                            <img src="{{ asset('images/products/22.png') }}" alt="">
+                                            <img src="<?php echo e(asset('images/products/22.png')); ?>" alt="">
                                         </div>
                                         <div class="flex items-center justify-between flex-grow gap10">
                                             <div class="name">
-                                                <a href="{{ asset('product-list.html') }}" class="body-text">Kristin Watson</a>
+                                                <a href="<?php echo e(asset('product-list.html')); ?>" class="body-text">Kristin Watson</a>
                                             </div>
                                             <div class="body-text">20 Nov 2023</div>
                                             <div class="body-text">20 Nov 2023</div>
@@ -313,11 +308,11 @@
                                     <li class="divider"></li>
                                     <li class="product-item gap14">
                                         <div class="image no-bg">
-                                            <img src="{{ asset('images/products/23.png') }}" alt="">
+                                            <img src="<?php echo e(asset('images/products/23.png')); ?>" alt="">
                                         </div>
                                         <div class="flex items-center justify-between flex-grow gap10">
                                             <div class="name">
-                                                <a href="{{ asset('product-list.html') }}" class="body-text">Mega Pumpkin Bone</a>
+                                                <a href="<?php echo e(asset('product-list.html')); ?>" class="body-text">Mega Pumpkin Bone</a>
                                             </div>
                                             <div class="body-text">20 Nov 2023</div>
                                             <div class="body-text">20 Nov 2023</div>
@@ -327,11 +322,11 @@
                                     <li class="divider"></li>
                                     <li class="product-item gap14">
                                         <div class="image no-bg">
-                                            <img src="{{ asset('images/products/24.png') }}" alt="">
+                                            <img src="<?php echo e(asset('images/products/24.png')); ?>" alt="">
                                         </div>
                                         <div class="flex items-center justify-between flex-grow gap10">
                                             <div class="name">
-                                                <a href="{{ asset('product-list.html') }}" class="body-text">Cloud Star Dynamo Dog Hip & Joint...</a>
+                                                <a href="<?php echo e(asset('product-list.html')); ?>" class="body-text">Cloud Star Dynamo Dog Hip & Joint...</a>
                                             </div>
                                             <div class="body-text">20 Nov 2023</div>
                                             <div class="body-text">20 Nov 2023</div>
@@ -341,11 +336,11 @@
                                     <li class="divider"></li>
                                     <li class="product-item gap14">
                                         <div class="image no-bg">
-                                            <img src="{{ asset('images/products/25.png') }}" alt="">
+                                            <img src="<?php echo e(asset('images/products/25.png')); ?>" alt="">
                                         </div>
                                         <div class="flex items-center justify-between flex-grow gap10">
                                             <div class="name">
-                                                <a href="{{ asset('product-list.html') }}" class="body-text">What to Give a Constipated Dog?</a>
+                                                <a href="<?php echo e(asset('product-list.html')); ?>" class="body-text">What to Give a Constipated Dog?</a>
                                             </div>
                                             <div class="body-text">20 Nov 2023</div>
                                             <div class="body-text">20 Nov 2023</div>
@@ -355,11 +350,11 @@
                                     <li class="divider"></li>
                                     <li class="product-item gap14">
                                         <div class="image no-bg">
-                                            <img src="{{ asset('images/products/24.png') }}" alt="">
+                                            <img src="<?php echo e(asset('images/products/24.png')); ?>" alt="">
                                         </div>
                                         <div class="flex items-center justify-between flex-grow gap10">
                                             <div class="name">
-                                                <a href="{{ asset('product-list.html') }}" class="body-text">Cloud Star Dynamo Dog Hip & Joint...</a>
+                                                <a href="<?php echo e(asset('product-list.html')); ?>" class="body-text">Cloud Star Dynamo Dog Hip & Joint...</a>
                                             </div>
                                             <div class="body-text">20 Nov 2023</div>
                                             <div class="body-text">20 Nov 2023</div>
@@ -379,16 +374,18 @@
             <!-- /main-content-wrap -->
             <!-- bottom-page -->
             <div class="bottom-page">
-                <div class="body-text">Copyright © 2024 {{ config('app.name', 'Laravel') }}. Design with</div>
+                <div class="body-text">Copyright © 2024 <?php echo e(config('app.name', 'Laravel')); ?>. Design with</div>
                 <i class="icon-heart"></i>
-                <div class="body-text">by <a href="">{{ config('app.name', 'Laravel') }}</a> All rights reserved.</div>
+                <div class="body-text">by <a href=""><?php echo e(config('app.name', 'Laravel')); ?></a> All rights reserved.</div>
             </div>
             <!-- /bottom-page -->
         </div>
 
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@push('scripts')
+<?php $__env->startPush('scripts'); ?>
 
-@endpush
+<?php $__env->stopPush(); ?>
+
+<?php echo $__env->make('admin.layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\laragon\www\wp_monkey\smutly-hatemverymuch_backend\resources\views/admin/dashboard.blade.php ENDPATH**/ ?>
