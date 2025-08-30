@@ -90,6 +90,13 @@
                                     </a>
                                 </li>
 
+                                <li class="menu-item {{ request()->routeIs('contact.index') ? 'active' : '' }}">
+                                    <a href="{{route('contact.index')}}" class="{{ request()->routeIs('contact.index') ? 'menu-item-button active' : '' }}">
+                                        <div class="icon"><i class="icon-user"></i></div>
+                                        <div class="text">Contact Messages</div>
+                                    </a>
+                                </li>
+
 {{--                                <li class="menu-item has-children active">--}}
 {{--                                    <a href="{{ asset('javascript:void(0);') }}" class="menu-item-button">--}}
 {{--                                        <div class="icon"><i class="icon-grid"></i></div>--}}
