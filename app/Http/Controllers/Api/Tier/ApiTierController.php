@@ -43,6 +43,7 @@ class ApiTierController extends Controller
             $validated = $validator->validated();
 
             $tier = Tier::create([
+                'user_id'     => auth()->id(),
                 'title'       => $validated['title'],
                 'price'       => $validated['price'] ?? null,
                 'description' => $validated['description'] ?? null,

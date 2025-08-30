@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\Contents\ContentController;
 use App\Http\Controllers\Api\Contents\ContentGetController;
 use App\Http\Controllers\Api\EmailVerificationController;
 use App\Http\Controllers\Api\PasswordResetController;
+use App\Http\Controllers\Api\Tier\ApiTierController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 

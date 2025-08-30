@@ -11,6 +11,7 @@ class Tier extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
+        'user_id',
         'title',
         'price',
         'description',
